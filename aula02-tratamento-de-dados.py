@@ -13,6 +13,7 @@ print(df.head(10))
 # SIMPLIFICAÇÂO DE NOME DAS COLUNAS:
 df.rename(columns = {
     'Carimbo de data/hora' : 'Data/hora',
+    'Você é comerciante?' : 'Comerciante',
     'Nome completo do comerciante' : 'Nome',
     'Nome do comércio' : 'Comércio',
     'Como você preferiria gerenciar os seus fornecedores?' : 'Plataforma',
@@ -25,3 +26,10 @@ print(df.head(10))
 
 # SALVAR:
 df.to_csv('dado-tratado.csv', index = False)
+
+# REMOVER NÃO COMERCIANTES:
+
+
+# SOMENTE ALGUMAS COLUNAS:
+dfr = df[['Nome', 'Plataforma', 'Novos fornecedores', 'Disponibilidade dos produtos', 'Influencia do valor do produto']]
+print(dfr)
